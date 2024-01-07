@@ -40,6 +40,11 @@ public class LineNotifyServiceImp implements LineNotifyService {
         try {
             String message = URLEncoder.encode(sendNotifyRequest.getMessage(), StandardCharsets.UTF_8.toString());//設定編碼 防止中文亂碼
             String requestBody = "message=" + message;
+            if(!sendNotifyRequest.getStickerPackageId().trim().isEmpty() &&!sendNotifyRequest.getStickerId().trim().isEmpty()){
+                requestBody+="&stickerPackageId="+sendNotifyRequest.getStickerPackageId();
+                requestBody+="&stickerId="+sendNotifyRequest.getStickerId();
+            }
+
             HttpEntity<String> requestEntity = new HttpEntity<>(requestBody, headers);
             ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, requestEntity, String.class);
 
