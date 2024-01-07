@@ -51,9 +51,9 @@ public class LineNotifyServiceImp implements LineNotifyService {
                 rs.setData("失敗");
             }
         } catch (UnsupportedEncodingException e) {
-            // 处理编码异常，例如记录日志或抛出自定义异常
-            rs.setCode(500); // 500 表示服务器内部错误
-            rs.setData("处理消息时出现编码异常");
+            // 處理編碼異常
+            rs.setCode(500); // 500 表示服务器内部錯誤
+            rs.setData("送出異常");
         }
 
         return rs;
