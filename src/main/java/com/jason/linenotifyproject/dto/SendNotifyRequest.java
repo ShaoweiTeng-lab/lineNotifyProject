@@ -1,2 +1,8 @@
-package com.jason.linenotifyproject.dto;public class SendNotifyRequest {
+package com.jason.linenotifyproject.dto;
+
+import lombok.Data;
+
+@Data
+public class SendNotifyRequest {
+    private  String message;
 }

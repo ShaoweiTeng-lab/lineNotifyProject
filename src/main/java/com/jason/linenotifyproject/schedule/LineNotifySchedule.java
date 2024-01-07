@@ -1,2 +1,7 @@
-package com.jason.linenotifyproject.schedule;public class LineNotifySchedule {
+package com.jason.linenotifyproject.schedule;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class LineNotifySchedule {
 }
